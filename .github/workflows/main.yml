@@ -10,5 +10,5 @@ jobs:
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
       run: echo $GITHUB_CONTEXT
-    - name: Show event payload only
-      run: echo $GITHUB_EVENT_PATH | jq .
+    - name: Output payload contents
+      run: cat $GITHUB_EVENT_PATH
